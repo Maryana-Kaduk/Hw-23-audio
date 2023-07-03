@@ -1,0 +1,251 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h5 ul, p {
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background: #FAFAFA;
+    margin: 0 auto;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+}
+.container {
+    max-width: 1130px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.products {
+    padding: 200px 0 120px;
+}
+.products__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.products-item {
+    width: 350px;
+    height: 204px;
+    background: #F1F1F1;
+    border-radius: 8px;
+    position: relative;
+    padding: 116px 109px 30px;
+    text-align: center;
+}
+.products-item img[alt="technic image"] {
+    position: absolute;
+    top: 0;
+    /* right: 113px; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.blur {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.products__category {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.products__shop {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    padding-right: 18px;
+    position: relative;
+    transition: all .5s;
+}
+.products__shop:hover {
+    color: #D87D4A;
+}
+.products__shop::before {
+    content: ' ';
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background-image: url(../images/arrow.svg);
+    right: 0px;
+    top: 3px;
+}
+
+.speaker {
+    padding: 48px 0;
+}
+.speaker-wrapper {
+    height: 560px;
+    background: #D87D4A;
+    border-radius: 8px;
+    padding: 133px 95px 124px;
+    background-image: url(../images/circles.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+.speaker__content {
+    max-width: 349px;
+    height: 303px;
+    margin-left: auto;
+}
+.speaker__heading {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+.speaker__text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    margin-bottom: 40px;
+}
+.black {
+    background: #000000;
+    color: #FFFFFF;
+    /* border: 1px solid #000000; */
+}
+.black:hover {
+    background: #4C4C4C;
+    /* background: transparent;
+    border: 1px solid #000000;
+    color: #000; */
+}
+.button {
+    /* width: 160px;
+    height: 48px; */
+    padding: 15px 29.5px 15px 31.5px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all .5s;
+    display: inline-block;
+}
+
+.content-image {
+    position: absolute;
+    left: 117px;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 709px;
+        padding: 0 10px;
+    }
+    .products {
+        padding: 75px 0 48px;
+    }
+    .products-item {
+        width: 223px;
+        height: 165px;
+        padding: 88px 54px 22px 58px;
+    }
+    .headphones-image {
+        width: 80px;
+    }
+    .speakers-image {
+        width: 84px;
+    }
+    .earphones-image {
+        width: 103px;
+    }
+    .blur{
+        top: 2px;
+    }
+    .products__category {
+        font-size: 15px;
+        letter-spacing: 1.071px;
+        margin-bottom: 17px;
+        line-height: 15px;
+    }
+
+    .speaker {
+        padding: 48px 0;
+    }
+    .speaker-wrapper {
+        height: 720px;
+        padding: 52px 170px 64px;
+        background-image: url(../images/circles-tablet.png);
+        position: static;
+        text-align: center;
+    }
+    .speaker__content {
+        margin-left: 0;
+    }
+    .content-image {
+        width: 197px;
+        position: static;
+        left: 0;
+        margin-bottom: 74px;
+    }
+    .speaker__content {
+        height: 604px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        max-width: 347px;
+        padding: 0 10px;
+    }
+    .products {
+        padding: 100px 0 72px;
+    }
+    .products__wrapper {
+        flex-direction: column;
+        gap: 68px;
+    }
+    .products-item {
+        width: 100%;
+        padding: 88px 107px 22px 109px;
+    }
+    .blur{
+        top: -4px;
+    }
+    .speaker {
+        padding: 48px 0;
+    }
+    .speaker-wrapper {
+        height: 600px;
+        padding: 55px 24px;
+        background-image: url(../images/circles-mobile.png);
+    }
+    .content-image {
+        width: 172px;
+        margin-bottom: 40px;
+    }
+    .speaker__heading {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 1.286px;
+        margin-bottom: 24px;
+    }
+    .speaker__text {
+        margin-bottom: 24px;
+    }
+    .speaker__content {
+        height: 490px;
+    }
+}
